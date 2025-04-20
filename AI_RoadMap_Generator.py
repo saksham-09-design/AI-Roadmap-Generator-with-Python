@@ -6,7 +6,6 @@ from ttkbootstrap.tooltip import ToolTip
 from tkinter import messagebox, ttk  # Standard UI components
 import tkinter as tk  # Core Tkinter module for GUI
 import google.generativeai as genai  # Gemini AI integration
-from gen_AI_Api import apiKey  # Gemini API Key stored in another file
 import re  # Regular expressions for parsing
 from fpdf import FPDF  # PDF generation library
 from fpdf.enums import XPos, YPos
@@ -14,7 +13,7 @@ import os  # For OS-specific tasks
 import platform  # To detect the current OS
 
 # ==== Gemini AI Configuration ====
-genai.configure(api_key=apiKey)
+genai.configure(api_key="PASTE YOUR API KEY HERE")
 client = genai.GenerativeModel(model_name="gemini-1.5-flash")
 
 # ==== Flags for state control ====
